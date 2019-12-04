@@ -6,8 +6,7 @@ import {
   Segment,
   Button,
   Header,
-  Message,
-  Icon
+  Message
 } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
@@ -60,9 +59,9 @@ class Login extends React.Component {
     return (
       <Grid textAlign="center" verticalAlign="middle" className="app">
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h1" icon color="violet" textAlign="center">
-            <Icon name="code branch" color="violet" />
-            Login to DevChat
+          <Header as="h1" icon color="green" textAlign="center">
+
+            Login to Ernesto's IRC
           </Header>
           <Form onSubmit={this.handleSubmit} size="large">
             <Segment stacked>
@@ -93,11 +92,11 @@ class Login extends React.Component {
               <Button
                 disabled={loading}
                 className={loading ? "loading" : ""}
-                color="violet"
+                color="green"
                 fluid
                 size="large"
               >
-                Submit
+                Log In
               </Button>
             </Segment>
           </Form>

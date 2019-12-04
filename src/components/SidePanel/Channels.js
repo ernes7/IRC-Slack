@@ -100,7 +100,7 @@ class Channels extends React.Component {
         key={channel.id}
         onClick={() => this.changeChannel(channel)}
         name={channel.name}
-        style={{ opacity: 0.7 }}
+        style={{ opacity: 1.0 }}
         active={channel.id === this.state.activeChannel}
       >
         # {channel.name}
@@ -122,9 +122,9 @@ class Channels extends React.Component {
         <Menu.Menu style={{ paddingBottom: "2em" }}>
           <Menu.Item>
             <span>
-              <Icon name="exchange" /> CHANNELS
+               CHANNELS
             </span>{" "}
-            ({channels.length}) <Icon name="add" onClick={this.openModal} />
+            <Icon name="add" onClick={this.openModal} />
           </Menu.Item>
           {this.displayChannels(channels)}
         </Menu.Menu>
@@ -137,7 +137,7 @@ class Channels extends React.Component {
               <Form.Field>
                 <Input
                   fluid
-                  label="Name of Channel"
+                  label="Name"
                   name="channelName"
                   onChange={this.handleChange}
                 />
@@ -146,7 +146,7 @@ class Channels extends React.Component {
               <Form.Field>
                 <Input
                   fluid
-                  label="About the Channel"
+                  label="Description"
                   name="channelDetails"
                   onChange={this.handleChange}
                 />

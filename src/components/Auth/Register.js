@@ -7,8 +7,8 @@ import {
   Segment,
   Button,
   Header,
-  Message,
-  Icon
+  Message
+
 } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
@@ -50,7 +50,7 @@ class Register extends React.Component {
   };
 
   isPasswordValid = ({ password, passwordConfirmation }) => {
-    if (password.length < 6 || passwordConfirmation.length < 6) {
+    if (password.length < 4 || passwordConfirmation.length < 4) {
       return false;
     } else if (password !== passwordConfirmation) {
       return false;
@@ -131,12 +131,13 @@ class Register extends React.Component {
     return (
       <Grid textAlign="center" verticalAlign="middle" className="app">
         <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h1" icon color="orange" textAlign="center">
-            <Icon name="puzzle piece" color="orange" />
-            Register for DevChat
+          <Header as="h1" icon color="green" textAlign="center">
+
+ 
+            Register for Ernesto's IRC
           </Header>
           <Form onSubmit={this.handleSubmit} size="large">
-            <Segment stacked>
+            <Segment stacked color="green">
               <Form.Input
                 fluid
                 name="username"
@@ -158,6 +159,7 @@ class Register extends React.Component {
                 value={email}
                 className={this.handleInputError(errors, "email")}
                 type="email"
+                colorborder="green"
               />
 
               <Form.Input
@@ -165,7 +167,7 @@ class Register extends React.Component {
                 name="password"
                 icon="lock"
                 iconPosition="left"
-                placeholder="Password"
+                placeholder="Password with more than 3 characters"
                 onChange={this.handleChange}
                 value={password}
                 className={this.handleInputError(errors, "password")}
@@ -187,11 +189,11 @@ class Register extends React.Component {
               <Button
                 disabled={loading}
                 className={loading ? "loading" : ""}
-                color="orange"
+                color="green"
                 fluid
                 size="large"
               >
-                Submit
+                +User
               </Button>
             </Segment>
           </Form>
@@ -202,7 +204,7 @@ class Register extends React.Component {
             </Message>
           )}
           <Message>
-            Already a user? <Link to="/login">Login</Link>
+            Already a user? <Link to="/login">Log in</Link>
           </Message>
         </Grid.Column>
       </Grid>
