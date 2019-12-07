@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./components/App";
 import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
-import Spinner from "./Spinner";
+import Loading from "./Loading";
 import registerServiceWorker from "./registerServiceWorker";
 import firebase from "./firebase";
 
@@ -40,7 +40,7 @@ class Root extends React.Component {
 
   render() {
     return this.props.isLoading ? (
-      <Spinner />
+      <Loading />
     ) : (
       <Switch>
         <Route exact path="/" component={App} />
