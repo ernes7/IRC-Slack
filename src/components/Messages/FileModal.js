@@ -44,7 +44,7 @@ class FileModal extends React.Component {
           <Input
             onChange={this.addFile}
             fluid
-            label="File types: jpg, png"
+            label="Only Images"
             name="file"
             type="file"
           />

@@ -160,13 +160,13 @@ class MessageForm extends React.Component {
           <Button
             onClick={this.sendMessage}
             disabled={loading}
-            color="orange"
-            content="Add Reply"
+            color="green"
+            content="Write Message"
             labelPosition="left"
             icon="edit"
           />
           <Button
-            color="teal"
+            color="red"
             disabled={uploadState === "uploading"}
             onClick={this.openModal}
             content="Upload Media"
